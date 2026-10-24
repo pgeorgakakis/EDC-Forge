@@ -2,7 +2,7 @@
 
 **Generate a working [Eclipse Dataspace Components (EDC)](https://github.com/eclipse-edc/Connector) node from a short questionnaire.**
 
-> **Status: early stage, no code yet.** This repository holds the plan, the scope and the discussion.
+> **Status: early stage, no code yet.** This repository holds the plan,  scope and open design questions.
 > Feedback is very welcome: please open an issue or join the discussion linked below.
 
 ## The problem
@@ -51,7 +51,7 @@ EDC-Forge aims to make EDC deployment easier by generating an initial configurat
   [Decentralized Claims Protocol 1.0](https://projects.eclipse.org/projects/technology.dataspace-dcp/releases/1.0.0),.
 - **Tracks upstream.** EDC [releases often](https://github.com/eclipse-edc/Connector/releases), so a versioned
   profile/template layer is tested in CI against two or more pinned EDC releases. The generator will separate version-specific configuration from its core logic, so upstream changes should usually require profile updates rather than changes to the generator itself.
-- **Open.** Apache 2.0, developed in the open.
+- **Open.** Apache 2.0, developed as open source.
 
 ## How it relates to other projects
 
