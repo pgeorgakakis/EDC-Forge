@@ -33,10 +33,10 @@ EDC-Forge adds the missing step **before deployment**:
    identity provider, transfer types and network exposure.
 2. **Generated artefacts.** EDC-Forge outputs:
    - environment and configuration files;
-   - a [Docker Compose](https://docs.docker.com/compose/) stack pre-wired to [Keycloak](https://www.keycloak.org/) and
+   - a [Docker Compose](https://docs.docker.com/compose/) script that uses [Keycloak](https://www.keycloak.org/) and
      [HashiCorp Vault](https://developer.hashicorp.com/vault), including a development-tier issuer for the
-     [Decentralized Claims Protocol (DCP)](https://github.com/eclipse-dataspace-dcp/decentralized-claims-protocol);
-   - baseline ODRL policy scaffolding from a small, documented set of patterns (open access, credential-gated,
+     [Decentralized Claims Protocol (DCP)](https://github.com/eclipse-dataspace-dcp/decentralized-claims-protocol).
+   - ODRL policies generated from a small, documented set of patterns (open access, credential-gated,
      time-bounded), following the [ODRL profile for data spaces](https://w3c.github.io/odrl/profile-dataspaces/).
 3. **Validation before first use:**
    - static checks on endpoints, secrets, CORS/TLS and control/data-plane consistency;
@@ -46,12 +46,9 @@ EDC-Forge adds the missing step **before deployment**:
 **Design principles**
 
 - **No fork.** EDC-Forge targets stock upstream EDC images and outputs plain configuration that you own and can edit.
-- **Standards-based.** It targets the
+- **Standards-based.** EDC-Forge targets the
   [Dataspace Protocol 2025-1](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1-err2/) and the
-  [Decentralized Claims Protocol 1.0](https://projects.eclipse.org/projects/technology.dataspace-dcp/releases/1.0.0),
-  both [on the way to ISO/IEC standardisation](https://newsroom.eclipse.org/news/announcements/eclipse-dataspace-working-group-edwg-advances-two-open-protocols-toward-global),
-  with validation aligned to the
-  [Eclipse Dataspace Technology Compatibility Kit (TCK)](https://projects.eclipse.org/projects/technology.dataspacetck).
+  [Decentralized Claims Protocol 1.0](https://projects.eclipse.org/projects/technology.dataspace-dcp/releases/1.0.0),.
 - **Tracks upstream.** EDC [releases often](https://github.com/eclipse-edc/Connector/releases), so a versioned
   profile/template layer is tested in CI against two or more pinned EDC releases. A new upstream release means updating
   a profile, not rewriting the generator.
