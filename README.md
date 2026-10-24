@@ -23,11 +23,11 @@ The [Minimum Viable Dataspace (MVD)](https://github.com/eclipse-dataspace-hub/Mi
 learning playground, but it is deliberately not a deployment tool. Its maintainers have said that automation like this
 belongs in a separate repository
 ([MinimumViableDataspace discussion #598](https://github.com/eclipse-dataspace-hub/MinimumViableDataspace/discussions/598)).
-This is that repository.
+EDC-Forge is intended to address that gap in a separate repository.
 
 ## What EDC-Forge will do
 
-EDC-Forge adds the missing step **before deployment**:
+EDC-Forge aims to make EDC deployment easier by generating an initial configuration from a short set of requirements:
 
 1. **Guided requirements dialogue (web UI and CLI).** You answer questions about your connector's role, storage,
    identity provider, transfer types and network exposure.
@@ -50,8 +50,7 @@ EDC-Forge adds the missing step **before deployment**:
   [Dataspace Protocol 2025-1](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1-err2/) and the
   [Decentralized Claims Protocol 1.0](https://projects.eclipse.org/projects/technology.dataspace-dcp/releases/1.0.0),.
 - **Tracks upstream.** EDC [releases often](https://github.com/eclipse-edc/Connector/releases), so a versioned
-  profile/template layer is tested in CI against two or more pinned EDC releases. A new upstream release means updating
-  a profile, not rewriting the generator.
+  profile/template layer is tested in CI against two or more pinned EDC releases. The generator will separate version-specific configuration from its core logic, so upstream changes should usually require profile updates rather than changes to the generator itself.
 - **Open.** Apache 2.0, developed in the open.
 
 ## How it relates to other projects
